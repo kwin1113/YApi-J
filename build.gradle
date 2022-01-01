@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '1.3.0'
+}
+
+group 'xyz.kwin'
+version '1.0-SNAPSHOT'
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    plugins = ["java"]
+    version = '2021.2.3'
+}
+
+patchPluginXml {
+    changeNotes = """
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>"""
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    gradlePluginPortal()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/com.alibaba/fastjson
+    implementation 'com.alibaba:fastjson:1.2.79'
+    // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
+    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+}
