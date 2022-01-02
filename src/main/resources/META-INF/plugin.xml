@@ -1,14 +1,17 @@
 <idea-plugin>
   <id>xyz.kwin.yapi</id>
   <name>YApi J</name>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <vendor email="kwin1113@foxmail.com">kwin.xyz</vendor>
 
   <description>
     <![CDATA[
       <div>
-        根据规范的JavaDoc/注解解析接口文档，一键上传至YApi<br>
-        使用前请先进行YApi相关配置，及解析规则配置<br>
+        通过模板配置，根据规范的JavaDoc/注解解析接口文档，一键上传至YApi，支持自定义注册方式（公司内部网关等）。<br>
+        使用前请先进行YApi相关配置，及解析规则配置。<br>
+
+        上传效果Demo可前往http://kwin.xyz:3000/查看，访客账号为visitor@foxmail.com/visitor。<br>
+        更多使用方式介绍详见：https://github.com/kwin1113/YApi-J
       </div>
 
       <div>
@@ -32,6 +35,9 @@
   <change-notes>
     <![CDATA[
        <ul>
+          <li>1.0.1<br>
+             更新插件介绍<br>
+          </li>
           <li>1.0.0<br>
              解析接口文档，上传至YApi平台。<br>
           </li>
