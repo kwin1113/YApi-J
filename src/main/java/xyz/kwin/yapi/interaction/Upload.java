@@ -188,7 +188,7 @@ public class Upload extends AnAction {
                     iterator.remove();
                     continue;
                 }
-                boolean valid = Arrays.stream(docComment.getTags()).anyMatch(e -> e.getName().equals(pathLocator.getLocation()));
+                boolean valid = Arrays.stream(docComment.getTags()).anyMatch(e -> pathLocator.getLocation().contains(e.getName()));
                 if (!valid) {
                     iterator.remove();
                 }
