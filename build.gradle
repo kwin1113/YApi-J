@@ -4,24 +4,20 @@ plugins {
 }
 
 group 'xyz.kwin'
-version '1.0-SNAPSHOT'
+version '1.0.0'
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
     plugins = ["java"]
-    version = '2021.2.3'
+    version = '2020.2'
+    updateSinceUntilBuild = false
 }
 
 patchPluginXml {
-    changeNotes = """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
 }
 
 repositories {
-    mavenLocal()
     mavenCentral()
-    gradlePluginPortal()
 }
 
 dependencies {

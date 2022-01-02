@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>xyz.kwin.yapi</id>
-  <name>YApi Uploader</name>
-  <version>1.0</version>
+  <name>YApi J</name>
+  <version>1.0.0</version>
   <vendor email="kwin1113@foxmail.com">kwin.xyz</vendor>
 
   <description>
@@ -40,7 +40,7 @@
   </change-notes>
 
   <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
-<!--  <idea-version since-build="193.0"/>-->
+  <idea-version since-build="202.0"/>
 
   <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
        on how to target different products -->

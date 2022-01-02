@@ -11,8 +11,8 @@ import java.util.Set;
  * @since 2021/12/27 3:20 下午
  */
 public interface CommonConstant {
-    String PLUGIN_NAME = "YApiUploader";
-    String PLUGIN_ID = "YApiUploader.id";
+    String PLUGIN_NAME = "YApi-J";
+    String PLUGIN_ID = "YApi-J.id";
 
     /**
      * 支持的Java类型（递归解析的终止条件）

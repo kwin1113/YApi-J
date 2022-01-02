@@ -13,7 +13,7 @@ import org.jetbrains.annotations.Nullable;
  * @author kwin
  * @since 2021/12/25 9:57 下午
  */
-@State(name = "Settings", storages = {@Storage(value = "YApiUploader_Settings.xml")})
+@State(name = "Settings", storages = {@Storage(value = "YApi_J_Settings.xml")})
 public class Settings implements PersistentStateComponent<Setting> {
 
     public static Settings getInstance() {
