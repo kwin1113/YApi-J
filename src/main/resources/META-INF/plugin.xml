@@ -1,26 +1,52 @@
 <idea-plugin>
   <id>xyz.kwin.yapi</id>
   <name>YApi J</name>
-  <version>1.0.1</version>
+  <version>1.0.0</version>
   <vendor email="kwin1113@foxmail.com">kwin.xyz</vendor>
 
   <description>
     <![CDATA[
       <div>
+        <h2>Introduction</h2>
+        By parse templates configuration in preference setting,
+        it's easy to generate APIs which suits the YApi platform.<br>
+        The project interfaces must be marked by standard JavaDoc
+        or annotations.<br>
+        Also supports custom interface register pattern not only
+        spring-controller pattern, such as custom annotation or comment.<br>
+
+        <h3>configuration rules</h3>
+        hover on the textfield to show config tips.
+        <ul>
+            <li>YApi url: (Required) your YApi server url.</li>
+            <li>Ignore classes list: add the qualified class name which should'nt be parse, such as some gateway context.</li>
+            <li>Project list: (Required) add YApi project tokens. Make sure that the YApi url is configured before project tokens added.</li>
+            <li>Parse pattern list: (Required) parse rules of interfaces.</li>
+        </ul>
+
+        <h4>Concrete configuration of parse pattern</h4>
+        <ul>
+            <li>Pattern name: (Required) the unique name of parse pattern.</li>
+            <li>Base Path Locator: locate rule of controller base path.</li>
+            <li>Method Locator: locate rule of interface request method, default POST to YApi if empty.</li>
+            <li>Path Locator: (Required) locate rule of interface path.</li>
+        </ul>
+    </div>
+
+
+    <div>
+        <h2>简介</h2>
         通过模板配置，根据规范的JavaDoc/注解解析接口文档，一键上传至YApi，支持自定义注册方式（公司内部网关等）。<br>
         使用前请先进行YApi相关配置，及解析规则配置。<br>
 
         上传效果Demo可前往http://kwin.xyz:3000/查看，访客账号为visitor@foxmail.com/visitor。<br>
         更多使用方式介绍详见：https://github.com/kwin1113/YApi-J
-      </div>
-
-      <div>
         <h3>配置规则</h3>
         <ul>
-          <li>YApi地址：必填。</li>
-          <li>过滤列表：允许为空。添加类的全限定名以过滤，在解析接口文档时不对列表中的类进行解析，通常用于内部网关上下文等对象的过滤。</li>
-          <li>项目列表：必填，在配置前请先配置YApi列表并保存。添加YApi项目的token，将自动将其解析为项目名称（进入配置页时将进行刷新，请及时删除无效token）。</li>
-          <li>配置模板：必填。配置接口文档的解析规则。</li>
+            <li>YApi地址：必填。</li>
+            <li>过滤列表：允许为空。添加类的全限定名以过滤，在解析接口文档时不对列表中的类进行解析，通常用于内部网关上下文等对象的过滤。</li>
+            <li>项目列表：必填，在配置前请先配置YApi列表并保存。添加YApi项目的token，将自动将其解析为项目名称（进入配置页时将进行刷新，请及时删除无效token）。</li>
+            <li>配置模板：必填。配置接口文档的解析规则。</li>
         </ul>
 
         <h4>模板的具体配置方式</h4>
@@ -28,15 +54,15 @@
         <li>basePath定位：该配置允许为空。用于定位接口的基本路径，将解析接口类上的注释/注解。</li>
         <li>method定位：该配置允许为空。用于定位接口的请求方式，允许为空以支持内部统一网关接口注册方式，将默认以POST方式注册到YApi。</li>
         <li>path定位：必填。用于定位接口路径。当定位方式为注解时，依次填入注解中接口路径定位对应属性，例如value，及注解类全限定名；当定位方式为注释时，请填入注释对应tag。</li>
-      </div>
+    </div>
     ]]>
   </description>
 
   <change-notes>
     <![CDATA[
        <ul>
-          <li>1.0.1<br>
-             更新插件介绍<br>
+          <li>1.0.0<br>
+             Base features: parse interfaces, and upload to YApi platform.<br>
           </li>
           <li>1.0.0<br>
              解析接口文档，上传至YApi平台。<br>
